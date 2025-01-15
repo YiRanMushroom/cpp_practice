@@ -17,7 +17,7 @@ file(GLOB_RECURSE MODULE_FILES "src/*.cppm" "src/*.ixx")
 file(GLOB_RECURSE SRC_FILES "src/*.cpp" "src/*.cxx")
 
 # -Werror
-add_compile_options(-Werror -Wall -Wextra -Wpedantic)
+add_compile_options(-Werror -Wall -Wno-unused-variable -Wno-unused-parameter -Wpedantic -Wextra -Wno-unused-function)
 
 add_executable(${PROJECT_NAME} ${SRC_FILES} ${MODULE_FILES}
         src/algorithm/quick_sort.cppm
