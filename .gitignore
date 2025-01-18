@@ -1,2 +1,9 @@
-/cmake-build-debug
+/cmake-build-debug_program
+/cmake-build-debug_utests
+/cmake-build-release
+
+!/cmake-build-debug_utests/CMakeFiles/clion-environment.txt
+!/cmmake-build-debug_program/CMakeFiles/clion-environment.txt
+!/cmake-build-release/CMakeFiles/clion-environment.txt
+
 /.idea

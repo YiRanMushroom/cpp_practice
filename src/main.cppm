@@ -5,13 +5,14 @@ module;
 #include <boost/asio.hpp>
 
 export module main;
-import quick_sort;
+import yiran.algorithm;
 import boost_asio;
 
+#ifdef DEFINE_ENTRANCE
 int main(int, char **) {
     fetch_content("www.google.com", "/");
 
     std::tuple tp{1, 2, 3, 4, 5};
     auto &&[a,b,c,d,e]{tp};
-
 }
+#endif
