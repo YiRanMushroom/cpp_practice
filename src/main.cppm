@@ -20,9 +20,7 @@ int main(int, char **) {
     constexpr auto db = [] {
         return std::vector{1, 2, 3, 4, 5, 6}
                | yiran::algorithm::filtered([](int a) { return a % 2 == 0; })
-               | yiran::algorithm::mapped<std::vector<double> >([](int a)-> double {
-                   return a * 2.5;
-               })
+               | yiran::algorithm::mapped<std::vector<double> >([](int a)-> double { return a * 2.5; })
                | yiran::algorithm::reduce([](auto &&first, auto &&second) { return first + second; });
     }();
 
