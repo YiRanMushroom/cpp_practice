@@ -60,6 +60,5 @@ enable_testing()
 if (USE_UNIT_TESTS)
 find_package(GTest CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-endif ()
-
 add_test(AllTestsInMain ${PROJECT_NAME})
+endif ()
