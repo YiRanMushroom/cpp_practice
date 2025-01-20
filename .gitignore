@@ -2,6 +2,6 @@
 /cmake-build-debug_utests/*
 /cmake-build-release/*
 
-/.idea
+/.idea/*
 
 !./.idea/workspace.xml
