@@ -76,6 +76,7 @@ TEST(algorithm, for_each_2) {
         }
         arr1.push_back(i);
     });
+
     arr0 | (func | move());
     const auto ans = std::vector{1, 2, 3};
     EXPECT_EQ(arr1, ans);

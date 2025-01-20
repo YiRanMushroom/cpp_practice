@@ -54,7 +54,7 @@ namespace yiran::algorithm {
 
     export template<typename Container, typename Comparator = std::less<void> >
     constexpr void sort(Container &container, Comparator &&comp = Comparator{}) {
-        sort(container.begin(), container.end(), std::forward<Comparator>(comp));
+        yiran::algorithm::sort(container.begin(), container.end(), std::forward<Comparator>(comp));
     }
 
     export template<typename Comparator = std::less<void> >

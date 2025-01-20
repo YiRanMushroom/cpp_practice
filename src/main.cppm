@@ -48,5 +48,14 @@ int main(int, char **) {
                | yiran::algorithm::reduce([](auto &&first, auto &&second) { return first + second; });
     }().empty());
 
+    operator<<(std::cout, std::vector{1, 2, 3, 4, 5, 6}
+                          | yiran::algorithm::filtered([](int a) { return a % 2 == 0; })
+                          | yiran::algorithm::mapped([](int a)-> int { return a * 5; })
+                          | yiran::algorithm::mapped<std::vector<std::string> >([](int a) {
+                              return std::format("value: {}\n", a);
+                          })
+                          | yiran::algorithm::reduce([](auto &&first, auto &&second) {
+                              return first + second;
+                          }));
 }
 #endif
